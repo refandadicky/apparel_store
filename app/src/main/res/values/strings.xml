@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Apparel Store</string>
+    <string name="login">Login</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="product">Product</string>
+</resources>

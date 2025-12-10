@@ -33,13 +33,11 @@ class MainActivity : AppCompatActivity() {
         setupRecyclerView()
         observeData()
 
-        // Memanggil data produk saat aplikasi dibuka
         viewModel.getProducts()
     }
 
     private fun setupRecyclerView() {
         binding.rvListproduct.apply {
-            // Menggunakan Grid Layout 2 kolom agar mirip toko online
             layoutManager = GridLayoutManager(this@MainActivity, 2)
             adapter = productAdapter
         }
@@ -58,7 +56,6 @@ class MainActivity : AppCompatActivity() {
                     binding.rvListproduct.isVisible = true
                     binding.tvError.isVisible = false
 
-                    // Memasukkan data ke adapter
                     result.payload?.let { products ->
                         productAdapter.submitData(products)
                     }
